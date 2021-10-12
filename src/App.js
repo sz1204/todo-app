@@ -20,6 +20,7 @@ import { Task } from "./components";
 const App = () => {
   // I've already added currTask for you as an example of useState!
   const [currTask, setCurrTask] = useState("");
+  
   // follow this example above & with the useState hook, create a variable called tasks. its default value is an empty array []
 
   /**
