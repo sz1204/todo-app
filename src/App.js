@@ -9,19 +9,13 @@ import Form from "react-bootstrap/Form";
 
 import { Task } from "./components";
 
-/**
- * TODO:
- * 1. Complete all the instructions here in App.js
- * 2. Complete all the instructions in the task.js file (also change the footer to your name)
- * 3. Delete these comments & feel free to play around with bootstrap!
- * 4. Optional Challenge: Add buttons to delete tasks!
- */
-
 const App = () => {
   // I've already added currTask for you as an example of useState!
   const [currTask, setCurrTask] = useState("");
+  const [tasks, setTasks] = useState([])
   
   // follow this example above & with the useState hook, create a variable called tasks. its default value is an empty array []
+
 
   /**
    * TODO: create a regular function called handleInput that takes in a parameter called event & updates currTask
@@ -31,8 +25,10 @@ const App = () => {
    * value entered by the user is being stored. In this case, it's stored here: event.target.value
    */
   const handleInput = (event) => {
+    setCurrTask(currTask)
     event.preventDefault(); // this prevents the page from refreshing when the button is clicked
     // TODO: call setCurrTask and pass it the string the user inputed
+    // Will save event.target.value as currTask
   };
 
   /**
@@ -43,7 +39,9 @@ const App = () => {
    *          const new_array = [...old_array, "wow"] (we're adding the string "wow")
    *          console.log(new_array) -> ["hi", "bye", "wow"]
    */
-  const addTask = () => {};
+  const addTask = () => {
+    // Will add the task typed in to the existing array of tasks
+  };
 
   return (
     <div className="home">
